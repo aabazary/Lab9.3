@@ -1,13 +1,10 @@
 package edu.sdccd.cisc191;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.NoSuchElementException;
 import java.util.concurrent.ConcurrentLinkedDeque;
 
 /**
- * A Warehouse receives, stores and ships Items.
- *
+ * A Warehouse receives, stores and ships Items.*
  * Adapted from Tasha Frankie and Allan Schougaard
  */
 public class Warehouse
@@ -15,7 +12,7 @@ public class Warehouse
     /**
      * storage is managed as one big stack, where items are laid on top of each other
      */
-    private ConcurrentLinkedDeque<Item> storage = new ConcurrentLinkedDeque<>();
+    private final ConcurrentLinkedDeque<Item> storage = new ConcurrentLinkedDeque<>();
 
     public int getNumberOfItemsInStock()
     {

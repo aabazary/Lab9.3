@@ -2,14 +2,13 @@ package edu.sdccd.cisc191;
 
 /**
  * Producers creates a number of new Items and sends them to a Warehouse
- *
  * Adapted from Tasha Frankie and Allan Schougaard
  */
 public class Producer extends Thread
 {
-    private String name;
-    private Warehouse warehouse;
-    private int numberOfItemsToProduce;
+    private final String name;
+    private final Warehouse warehouse;
+    private final int numberOfItemsToProduce;
 
     public Producer(String givenName, Warehouse givenWarehouse, int givenNumberOfItemsToProduce)
     {

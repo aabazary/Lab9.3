@@ -2,14 +2,13 @@ package edu.sdccd.cisc191;
 
 /**
  * Consumers receive a number of Items from a Warehouse
- *
  * Adapted from Tasha Frankie and Allan Schougaard
  */
 public class Consumer extends Thread
 {
-    private String name;
-    private Warehouse warehouse;
-    private int numberOfItemsToConsume;
+    private final String name;
+    private final Warehouse warehouse;
+    private final int numberOfItemsToConsume;
 
     public Consumer(String givenName, Warehouse givenWarehouse, int givenNumberOfItemsToConsume)
     {
