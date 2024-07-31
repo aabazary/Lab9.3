@@ -21,11 +21,11 @@ public class Producer extends Thread
     public void run()
     {
         System.out.println(name + " running in Thread: " + Thread.currentThread().getName());
-
+        Item[] batch = new Item[numberOfItemsToProduce];
         for(int i = 0; i < numberOfItemsToProduce; i++){
-            warehouse.receive(new Item());
+            batch[i] = new Item();
         }
-
+        warehouse.receiveBatch(batch);
 
         System.out.println(name + " ended.");
     }

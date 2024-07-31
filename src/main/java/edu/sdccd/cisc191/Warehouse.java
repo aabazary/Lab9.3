@@ -19,6 +19,19 @@ public class Warehouse
         return storage.size();
     }
 
+
+    /**
+     * Add item to the collection based on a list of items
+     *
+     * @param items the item to store in the Warehouse
+     */
+    public void receiveBatch(Item[] items) {
+        System.out.println("Warehouse receiveBatch() running in Thread: " + Thread.currentThread().getName());
+        for(Item item : items) {
+            storage.push(item);
+        }
+    }
+
     /**
      * Add item to the collection and make the tests pass.
      *
